@@ -5,18 +5,10 @@ from sqlalchemy.orm import declarative_base
 engine=create_engine()
 Base=declarative_base()
 
+
 class Pessoa(Base):
     __tablename__ = "pessoas"
     
     id = Column(Integer, primary_key=True, autoincrement=True)
     nome = Column(String(100), nullable=False)
     sobrenome = Column(String(100))
-
-
-class Evento(Base):
-    __tablename__ = "eventos"
-    
-    id = Column(Integer, primary_key=True)
-    local = Column(String(100))
-
-Base.metadata.create_all(bind=engine)

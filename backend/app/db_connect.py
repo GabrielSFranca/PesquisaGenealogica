@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import OperationalError
+# lib psycopg2
 
 # postgresql+psycopg2://<usuario>:<senha>@<host>:<porta>/<nome_do_banco>
 

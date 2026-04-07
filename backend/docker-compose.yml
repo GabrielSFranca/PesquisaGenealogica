@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: pgdb_genealogy
+    restart: always
+    environment:
+      # ALERTA: Estas são as credenciais do seu banco LOCAL. 
+      # Elas devem bater com o que você colocou no seu arquivo .env
+      POSTGRES_USER: gabrielfranca
+      POSTGRES_PASSWORD: admin1801
+      POSTGRES_DB: db_genealogy
+    ports:
+      - "5436:5436"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+# O volume garante que os dados não se apaguem quando você desligar o PC
+volumes:
+  pgdata:
