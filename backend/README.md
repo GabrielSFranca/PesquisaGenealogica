@@ -29,13 +29,3 @@ Evento {
     pers_id FK -> Pessoa.id NULL, -- Para BIRT, DEAT, IMMI
     union_id FK -> Uniao.id NULL    -- Para MARR, DIV
 }
-
-
-
-
-
-docker run --name postgres-db \
-  -e POSTGRES_PASSWORD=postgres \
-  -e POSTGRES_DB=genealogy \
-  -p 5432:5432 \
-  -d postgres
